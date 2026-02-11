@@ -7,16 +7,17 @@ const groceries= defineModel<Grocery[]>();
 </script>
 
 <template>
-    <table>
+    <table id="grocerytable">
         <tr>
             <th>Product</th>
             <th>Amount</th>
             <th>Minimum amount</th>
         </tr>
-        <tr v-for="(grocery, index) in groceries">
+        <tr v-for="grocery in groceries">
             <td>{{ grocery.name }}</td>
-            <td><input type="number" v-model="groceries[index].actualAmount"></td>
+            <td><input type="number" v-model="grocery.actualAmount"></td>
             <td>{{ grocery.minimumAmount }}</td>
+            <button class="btn-secundairy">Edit</button>
         </tr>
     </table>
 </template>

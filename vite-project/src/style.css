@@ -1,3 +1,5 @@
+/*https://mycolor.space/?hex=%23E2AA0A&sub=1*/
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -95,7 +97,7 @@ nav {
 .main-nav-item#home:hover {
   border: 3px solid #4e4637;
 }
-.main-nav-item {
+.main-nav-item, .btn-secundairy {
   margin: 10px;
   background-color: #b5aa99; 
   border-radius: 10px;
@@ -104,7 +106,36 @@ nav {
   padding: 10px;
   
 }
+.btn-primary {
+  background-color: #2f4858;
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+}
+.btn-primary:hover {
+  border: 3px solid #2f4858;
+}
+.btn-secundairy {
+  border: 3px solid white;
+}
+.btn-secundairy:hover {
+  border: 3px solid #b5aa99;
+
+}
 .main-nav-item:hover {
   border: 3px solid #b5aa99;
   color: black;
 }
+
+#grocerytable input {
+  background-color: #dfe0df;
+  border: 3px solid #dfe0df;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+#grocerytable input:focus {
+  outline: none;
+  border: 3px solid #4e4637;
+}
+  

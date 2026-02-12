@@ -23,7 +23,7 @@ const newGrocery: Grocery = {
 </script>
 
 <template>
-  <GroceryForm :newGrocery="newGrocery" @updateList="addGrocery"/>
+  <GroceryForm :grocery="newGrocery" @updateList="addGrocery"/>
 </template>
 
 <style scoped></style>

@@ -37,12 +37,12 @@ const inventory = ref<Grocery[]>([
         id: 5,
         name: 'Bananen',
         actualAmount: 5,
-        minimumAmount: 1,
+        minimumAmount: 6,
     },
     {
         id: 6,
         name: 'Zomerfruit',
-        actualAmount: 1,
+        actualAmount: 0,
         minimumAmount: 1,
     },
     {
@@ -55,6 +55,14 @@ const inventory = ref<Grocery[]>([
 
 //getters
 export const getInventory = computed(() => inventory.value);
+export const getGroceryById = (groceryId: number) => computed(() => inventory.value.find(grocery => grocery.id === groceryId)); 
 
 //action
 export const addGrocery = (newGrocery: Grocery) => inventory.value.push(newGrocery);
+export const updateGrocery = (newGrocery: Grocery) => {
+    inventory.value = inventory.value.map(grocery => 
+        grocery.id === newGrocery.id ? newGrocery : grocery
+    );
+}   
+
+    

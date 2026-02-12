@@ -87,6 +87,7 @@ nav {
   padding: 20px;
   border-radius: 10px;
 }
+/*
 .main-nav-item#home {
   background-color: #4e4637;
   color: blue;
@@ -96,7 +97,7 @@ nav {
 }
 .main-nav-item#home:hover {
   border: 3px solid #4e4637;
-}
+}*/
 .main-nav-item, .btn-secundairy {
   margin: 10px;
   background-color: #b5aa99; 
@@ -126,16 +127,35 @@ nav {
   border: 3px solid #b5aa99;
   color: black;
 }
+.router-link-active {
+  background: #4e4637;
+  color: white;
+}
+.router-link-active:hover {
+  border: 3px solid #4e4637;
+  color: white;
+}
 
-#grocerytable input {
+#grocerytable input, #groceryform input {
   background-color: #dfe0df;
   border: 3px solid #dfe0df;
   border-radius: 10px;
   text-align: center;
   padding: 10px;
 }
-#grocerytable input:focus {
+#grocerytable input:focus, #groceryform input:focus {
   outline: none;
   border: 3px solid #4e4637;
 }
-  
+#groceryform input {
+  width: 100%;
+}
+#groceryform h4 {
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.product-name {
+  text-align: left;
+  padding-right: 15px;
+}

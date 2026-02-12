@@ -7,6 +7,6 @@ import Order from './pages/Order.vue';
 export const routes = [
   {path: '/', component: Overview, name: 'inventory.overview'},
   {path: '/add', component: Add, name: 'inventory.add'},
-  {path: '/edit', component: Edit, name: 'inventory.edit'},
+  {path: '/edit/:id', component: Edit, name: 'inventory.edit'},
   {path: '/order', component: Order, name: 'inventory.order'},
 ];

@@ -1,16 +1,10 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import GroceryTable from '../components/GroceryTable.vue'
 import { getInventory } from '../store';
-import type { Grocery } from '../store';
 
-const orderGroceries = getInventory.value.filter(checkInventory);
+const orderGroceries = computed(() => getInventory.value.filter(grocery => grocery.actualAmount < grocery.minimumAmount));
 
-function checkInventory(grocery: Grocery) {
-  if (grocery.actualAmount < grocery.minimumAmount) {
-    return grocery;
-  }
-  
-}
 </script>
 
 <template>
